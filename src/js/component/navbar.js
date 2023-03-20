@@ -6,12 +6,10 @@ export const Navbar = () => {
 	return (
 		<nav className="navbar navbar-light bg-light mb-3 bg-black">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1 mx-2 text-white">Star Wars</span>
+				<span className="navbar mb-0 h1 mx-2 text-white">Star Wars</span>
 			</Link>
 			<div className="ml-auto mx-2">
-				<Link to="/demo">
-					<Dropdown/>
-				</Link>
+				<Dropdown/>
 			</div>
 		</nav>
 	);

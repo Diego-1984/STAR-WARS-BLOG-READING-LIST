@@ -29,17 +29,21 @@ const Planets=()=>{
         <Planet 
             title="Cantonica" 
             text="Population last year: 4574516
-            Description: House of Leia"/>
+            Description: House of Leia"
+            link="/cantonica"/>
+            
 
         <Planet 
             title="Anoat"
             text="Population last year: 54678416+0
-            Description: Cheewaka territory"/>
+            Description: Cheewaka territory"
+            link="/anoat"/>
 
         <Planet 
             title="Crait" 
             text="Population last year: 200000
-            Description: Land of Robots"/>
+            Description: Land of Robots"
+            link="/crait"/>
         
         </>
     )

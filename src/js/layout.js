@@ -3,7 +3,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo, Geonosis } from "./views/geonosis";
+import { Geonosis } from "./views/geonosis";
+import { Cantonica } from "./views/cantonica";
+import { Anoat } from "./views/anoat";
+import { Crait } from "./views/crait";
 import { Single } from "./views/single";
 import injectContext from "./store/appContext";
 
@@ -24,6 +27,9 @@ const Layout = () => {
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/geonosis" element={<Geonosis />} />
+						<Route path="/cantonica" element={<Cantonica />} />
+						<Route path="/anoat" element={<Anoat />} />
+						<Route path="/crait" element={<Crait />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
