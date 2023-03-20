@@ -9,7 +9,7 @@ const Planet=(props)=>{
             <div className="card-body">
                 <h5 className="card-title d-flex justify-content-center">{props.title}</h5>
                 <p className="card-text d-flex text-center">{props.text}</p>
-                <Link to="/demo" className="btn btn-primary mx-4">Learn more</Link>
+                <Link to= {props.link}className="btn btn-primary mx-4">Learn more</Link>
                 <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-heart"></i></button>
             </div>
     </div>
@@ -21,28 +21,25 @@ const Planets=()=>{
         <>
         
         <Planet 
-            title="Hola" 
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
-            buttom="Pulsa aqui"/>
+            title="Geonosis" 
+            text="Population last year: 215875616
+            Description: Land of oceans"
+            link= "/geonosis"/>
 
         <Planet 
-            title="¡Perfecto!" 
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
-            buttom="¡Dale duro!"/>
+            title="Cantonica" 
+            text="Population last year: 4574516
+            Description: House of Leia"/>
 
         <Planet 
-            title="Lo estoy logrando"
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
-            buttom="Haz click"/>
+            title="Anoat"
+            text="Population last year: 54678416+0
+            Description: Cheewaka territory"/>
 
         <Planet 
-            title="¡Yuhuuu!" 
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
-            buttom="Mas info"/>
+            title="Crait" 
+            text="Population last year: 200000
+            Description: Land of Robots"/>
         
         </>
     )
