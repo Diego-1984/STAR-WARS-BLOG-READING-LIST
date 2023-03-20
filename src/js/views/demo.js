@@ -10,34 +10,14 @@ export const Demo = () => {
 
 	return (
 		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
+			<div className="row">
+				<div className="col-6"><img className="card-img-top" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/1200px-Star_Wars_Logo.svg.png" alt="Card image cap" /></div>
+				<div className="col-6">
+					<h1>Geonosis</h1>
+					<p1>Geonosis, referred to as Geonosia by some natives, was the desert home planet of the Geonosians. It was the Confederacy of Independent Systems' first capital and hosted its major battle droid foundries. It was the site of the First Battle of Geonosis, the opening conflict of the Clone Wars, as well as the subsequent invasion by the Galactic Republic. During and after the war, the Death Star was constructed above the planet. Five years after the conflict's conclusion and transformation of the Galactic Republic, the Galactic Empire would garrison the planet heavily and attempt to mine the planet's asteroids for minerals. At least five years after the Clone Wars, the Empire moved the Death Star to another construction site and the planet was sterilized by the Empire as a security measure, an act which resulted in the virtual elimination of the planet's native population.</p1>
+				</div>
+			</div>
+			
 		</div>
 	);
 };
