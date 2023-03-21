@@ -22,30 +22,26 @@ const Characters=()=>{
         
         <Character 
             title="R2-D2" 
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
+            text="Gender: male, Eye Color: Blue, Hair Color:Brown"
             buttom="Learm more"
             link="r2d2"/>
 
         <Character 
             title="C3PO" 
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
+            text="Gender: male, Eye Color: Blue, Hair Color:Brown"
             buttom="Learn more"
             link="c3po"/>
             
 
         <Character 
             title="LUCK"
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
+            text="Gender: male, Eye Color: Blue, Hair Color:Brown"
             buttom="Learn more"
             link="/luck"/>
 
         <Character 
             title="LEIA" 
-            text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
-            simplemente porque es el dolor."
+            text="Gender: male, Eye Color: Blue, Hair Color:Brown"
             buttom="Learn more"
             link="/leia"/>
         
