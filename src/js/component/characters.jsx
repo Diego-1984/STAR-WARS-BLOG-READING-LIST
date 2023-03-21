@@ -9,7 +9,7 @@ const Character=(props)=>{
             <div className="card-body">
                 <h5 className="card-title d-flex justify-content-center">{props.title}</h5>
                 <p className="card-text d-flex text-center">{props.text}</p>
-                <Link to="/descriptionGeonosis" className="btn btn-primary mx-4">Learn more</Link>
+                <Link to= {props.link}className="btn btn-primary mx-4">Learn more</Link>
                 <button type="button" class="btn btn-outline-danger"><i class="fa-solid fa-heart"></i></button>
             </div>
     </div>
@@ -24,25 +24,30 @@ const Characters=()=>{
             title="R2-D2" 
             text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
             simplemente porque es el dolor."
-            buttom="Learm more"/>
+            buttom="Learm more"
+            link="r2d2"/>
 
         <Character 
             title="C3PO" 
             text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
             simplemente porque es el dolor."
-            buttom="Learn more"/>
+            buttom="Learn more"
+            link="c3po"/>
+            
 
         <Character 
             title="LUCK"
             text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
             simplemente porque es el dolor."
-            buttom="Learn more"/>
+            buttom="Learn more"
+            link="/luck"/>
 
         <Character 
             title="LEIA" 
             text="No hay nadie que ame el dolor mismo, que lo busque, lo encuentre y lo quiera, 
             simplemente porque es el dolor."
-            buttom="Learn more"/>
+            buttom="Learn more"
+            link="/leia"/>
         
         </>
     )
