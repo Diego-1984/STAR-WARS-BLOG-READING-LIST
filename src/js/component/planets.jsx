@@ -35,7 +35,7 @@ const Planets=()=>{
 
         <Planet 
             title="Anoat"
-            text="Population last year: 54678416+0
+            text="Population last year: 546784160
             Description: Cheewaka territory"
             link="/anoat"/>
 
