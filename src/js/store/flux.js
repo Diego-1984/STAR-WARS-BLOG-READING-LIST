@@ -12,7 +12,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			// favorites: [
+			// 	{
+			// 		name:
+			// 	}
+			// ]
 		},
 		actions: {
 			// Use getActions to call a function within a fuction
@@ -23,6 +28,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+			},
+			addDemo: (clave, valor) => {
+				const store = getStore()
+				setStore({demo: [...store.demo, {[clave]: valor}]})
 			},
 			changeColor: (index, color) => {
 				//get the store
