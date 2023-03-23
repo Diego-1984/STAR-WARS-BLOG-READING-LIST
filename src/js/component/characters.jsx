@@ -31,7 +31,7 @@ const Characters=()=>{
             link="r2d2"/>
 
         <Character 
-            title="C3PO" 
+            title="C-3PO" 
             text="Gender: male, Eye Color: Blue, Hair Color:Brown"
             buttom="Learn more"
             link="c3po"/>
