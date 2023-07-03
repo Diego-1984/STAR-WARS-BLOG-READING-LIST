@@ -1,52 +1,29 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			],
-			// favorites: [
-			// 	{
-			// 		name:
-			// 	}
-			// ]
+			character:[]
+			,
+			characterDetails:{},
+			
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			fetchCharacter:()=>{
+				fetch("https://www.swapi.tech/api/people")
+				.then(response=>response.json())
+				.then(response=>{
+					console.log(response)
+					setStore({character:response.results})
+				})
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			addDemo: (clave, valor) => {
-				const store = getStore()
-				setStore({demo: [...store.demo, {[clave]: valor}]})
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
-
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
-				});
-
-				//reset the global store
-				setStore({ demo: demo });
+			fetchCharacterDetails:(id)=>{
+				fetch(`https://www.swapi.tech/api/people/${id}`)
+				.then(response=>response.json())
+				.then(response=>{
+					console.log(response)
+					setStore({characterDetails:response.result.properties})
+				})
 			}
+
 		}
 	};
 };
