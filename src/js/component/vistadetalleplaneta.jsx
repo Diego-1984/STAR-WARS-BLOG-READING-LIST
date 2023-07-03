@@ -19,27 +19,31 @@ const Vistadetalleplaneta = () => {
                   className="card-img-top"
                   src={`https://starwars-visualguide.com/assets/img/planets/${params.id}.jpg`}
                   alt="Card image cap"
+                  width="250"
+                  class="my-4"
                 />
               </div>
               <div className="col-6">
                 <h1>{store.planetDetails.name}</h1>
                 <p1>{store.planetDetails.description}</p1>
               </div>
-              <div className="row h4 pb-2 mb-4 mt-5 text-danger border-bottom border-danger">
-                <div className="col-2">Name</div>
-                <div className="col-2">Climate</div>
-                <div className="col-2">Population</div>
-                <div className="col-2">Orbital Period</div>
-                <div className="col-2 ">Rotation period</div>
-                <div className="col-2">Diameter</div>
-              </div>
-              <div className="row text-danger">
-                <div className="col-2">{store.planetDetails.name}</div>
-                <div className="col-2">{store.planetDetails.climate}</div>
-                <div className="col-2">{store.planetDetails.population}</div>
-                <div className="col-2">{store.planetDetails.orbital_period}</div>
-                <div className="col-2">{store.planetDetails.rotation_period}</div>
-                <div className="col-2">{store.planetDetails.diameter}</div>
+              <div className="container my-4">
+                <div className="row h4 pb-2 mb-4 mt-1 text-danger border-bottom border-danger">
+                  <div className="col-2">Name</div>
+                  <div className="col-2">Climate</div>
+                  <div className="col-2">Population</div>
+                  <div className="col-2">Orbital Period</div>
+                  <div className="col-2 ">Rotation period</div>
+                  <div className="col-2">Diameter</div>
+                </div>
+                <div className="row text-danger">
+                  <div className="col-2">{store.planetDetails.name}</div>
+                  <div className="col-2">{store.planetDetails.climate}</div>
+                  <div className="col-2">{store.planetDetails.population}</div>
+                  <div className="col-2">{store.planetDetails.orbital_period}</div>
+                  <div className="col-2">{store.planetDetails.rotation_period}</div>
+                  <div className="col-2">{store.planetDetails.diameter}</div>
+                </div>
               </div>
             </div>
           </div>
