@@ -23,10 +23,22 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({ characterDetails: response.result.properties });
           });
       },
-	  
-	
-	  
-	  
+      fetchPlanet: () => {
+        fetch("https://www.swapi.tech/api/planets")
+          .then((response) => response.json())
+          .then((response) => {
+            console.log(response);
+            setStore({ planet: response.results });
+          });
+      },
+      fetchPlanetDetails: (id) => {
+        fetch(`https://www.swapi.tech/api/planets/${id}`)
+          .then((response) => response.json())
+          .then((response) => {
+            console.log(response);
+            setStore({ planetDetails: response.result.properties });
+          });
+      },
     },
   };
 };

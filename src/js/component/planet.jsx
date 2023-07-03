@@ -11,13 +11,13 @@ const Planet = (props) => {
     <>
       <div className="row">
       <div className="d-flex">
-                    {store.planet.map((land, index) => {
+                    {store.planet.map((planets, index) => {
                     return (
-                        <div className="card mx-3" style={{ minWidth: "250px", maxWidth: "600px" }} key={index}>
+                        <div className="card mx-3 bg-transparent border-dark" style={{ minWidth: "250px", maxWidth: "600px" }} key={index}>
                         <img src={"https://starwars-visualguide.com/assets/img/planets/" + (index+1) + ".jpg"} className="card-img-top" style={{ height: "325px", objectFit: "cover" }} />
                         <div className="card-body">
-                            <h5 className="card-title" style={{ overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" }}>{people.name}</h5>
-                            <Link to={`/people/${people.uid}`} className="btn btn-primary">
+                            <h5 className="card-title" style={{ overflow: "hidden", whiteSpace: "nowrap", textOverflow: "ellipsis" }}>{planets.name}</h5>
+                            <Link to={`/people/${planets.uid}`} className="btn btn-transparent border-dark">
                                 Learn more!
                             </Link>
                           
