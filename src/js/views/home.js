@@ -6,7 +6,7 @@ import Planet from "../component/planet.jsx";
 const Home = () => {
   return (
     <>
-      <div className="container-fluid vw-100">
+      <div className="container-fluid bg-black">
         <h1>Characters</h1>
         <div className="card-group mt-3">
           <Character />
