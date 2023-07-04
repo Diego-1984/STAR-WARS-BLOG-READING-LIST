@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
 const Planet = () => {
-    const { store, actions } = useContext(Context);
+  const { store, actions } = useContext(Context);
 
   return (
     <>
@@ -30,21 +30,24 @@ const Planet = () => {
                     textOverflow: "ellipsis",
                   }}
                 >
-                  {planets.name} 
-                  {store.planetDetails.population}
+                  {planets.name}
                 </h5>
-                <Link
-                  to={`/planets/${planets.uid}`}
-                  className="btn btn-transparent border-dark"
-                >
-                  Learn more!
-                </Link>
-                <button
-                  onClick={() => actions.setFavorites(planets.name)}
-                  className="color-danger border-danger bg-transparent ms-5"
-                >
-                  <i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i>
-                </button>
+                <h6>Population: {store.planetDetails.population}</h6>
+                <h6>Terrain: {store.planetDetails.terrain}</h6>
+                <div className="mt-3 justify-content-between d-flex">
+                  <Link
+                    to={`/planets/${planets.uid}`}
+                    className="btn btn-transparent border-dark"
+                  >
+                    Learn more!
+                  </Link>
+                  <button
+                    onClick={() => actions.setFavorites(planets.name)}
+                    className="color-danger border-danger bg-transparent ms-5"
+                  >
+                    <i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

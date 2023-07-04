@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
-const Character = () => { 
+const Character = () => {
   const { store, actions } = useContext(Context);
 
   return (
@@ -31,20 +31,25 @@ const Character = () => {
                   }}
                 >
                   {people.name}
-                  {store.characterDetails.gender}
                 </h5>
-                <Link
-                  to={`/people/${people.uid}`}
-                  className="btn btn-transparent border-dark"
-                >
-                  Learn more!
-                </Link>
-                <button
-                  onClick={() => actions.setFavorites(people.name)}
-                  className="color-danger border-danger bg-transparent ms-5"
-                >
-                  <i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i>
-                </button>
+                <h6>Gender: {store.characterDetails.gender}</h6>
+                <h6>Hair color: {store.characterDetails.hair_color}</h6>
+                <h6>Eye color: {store.characterDetails.eye_color}</h6>
+
+                <div className="mt-3 justify-content-between d-flex">
+                  <Link
+                    to={`/people/${people.uid}`}
+                    className="btn btn-transparent border-dark"
+                  >
+                    Learn more!
+                  </Link>
+                  <button
+                    onClick={() => actions.setFavorites(people.name)}
+                    className="color-danger border-danger bg-transparent ms-5"
+                  >
+                    <i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

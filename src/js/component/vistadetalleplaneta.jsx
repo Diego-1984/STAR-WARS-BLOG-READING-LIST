@@ -13,7 +13,7 @@ const Vistadetalleplaneta = () => {
       {store.planetDetails ? (
         <div>
           <div className="text-black">h</div>
-          <div className="container"style={{ marginTop: "75px" }}>
+          <div className="container" style={{ marginTop: "75px" }}>
             <div className="row">
               <div className="col-6">
                 <img
