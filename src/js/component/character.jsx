@@ -41,7 +41,9 @@ const Character = (props) => {
                 >
                   Learn more!
                 </Link>
-                <button className="color-danger border-danger bg-transparent ms-5"><i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i></button>
+                <button className="color-danger border-danger bg-transparent ms-5">
+                  <i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i>
+                </button>
               </div>
             </div>
           </div>

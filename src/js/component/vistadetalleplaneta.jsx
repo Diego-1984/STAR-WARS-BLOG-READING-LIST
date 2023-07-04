@@ -37,12 +37,24 @@ const Vistadetalleplaneta = () => {
                   <div className="col-2 text-center">Diameter</div>
                 </div>
                 <div className="row text-danger">
-                  <div className="col-2 text-center">{store.planetDetails.name}</div>
-                  <div className="col-2 text-center">{store.planetDetails.climate}</div>
-                  <div className="col-2 text-center">{store.planetDetails.population}</div>
-                  <div className="col-2 text-center">{store.planetDetails.orbital_period}</div>
-                  <div className="col-2 text-center">{store.planetDetails.rotation_period}</div>
-                  <div className="col-2 text-center">{store.planetDetails.diameter}</div>
+                  <div className="col-2 text-center">
+                    {store.planetDetails.name}
+                  </div>
+                  <div className="col-2 text-center">
+                    {store.planetDetails.climate}
+                  </div>
+                  <div className="col-2 text-center">
+                    {store.planetDetails.population}
+                  </div>
+                  <div className="col-2 text-center">
+                    {store.planetDetails.orbital_period}
+                  </div>
+                  <div className="col-2 text-center">
+                    {store.planetDetails.rotation_period}
+                  </div>
+                  <div className="col-2 text-center">
+                    {store.planetDetails.diameter}
+                  </div>
                 </div>
               </div>
             </div>

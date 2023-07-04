@@ -37,12 +37,18 @@ const Vistadetalle = () => {
                   <div className="col-2 text-center">Eye Color</div>
                 </div>
                 <div className="row text-danger">
-                  <div className="col-2 text-center">{store.characterDetails.name}</div>
+                  <div className="col-2 text-center">
+                    {store.characterDetails.name}
+                  </div>
                   <div className="col-2 text-center">
                     {store.characterDetails.birth_year}
                   </div>
-                  <div className="col-2 text-center">{store.characterDetails.gender}</div>
-                  <div className="col-2 text-center">{store.characterDetails.height}</div>
+                  <div className="col-2 text-center">
+                    {store.characterDetails.gender}
+                  </div>
+                  <div className="col-2 text-center">
+                    {store.characterDetails.height}
+                  </div>
                   <div className="col-2 text-center">
                     {store.characterDetails.skin_color}
                   </div>
