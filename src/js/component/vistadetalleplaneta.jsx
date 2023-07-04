@@ -19,8 +19,8 @@ const Vistadetalleplaneta = () => {
                   className="card-img-top"
                   src={`https://starwars-visualguide.com/assets/img/planets/${params.id}.jpg`}
                   alt="Card image cap"
-                  width="250"
-                  class="my-4"
+                  width="265"
+                  class="my-5"
                 />
               </div>
               <div className="col-6">
@@ -29,20 +29,20 @@ const Vistadetalleplaneta = () => {
               </div>
               <div className="container my-4">
                 <div className="row h4 pb-2 mb-4 mt-1 text-danger border-bottom border-danger">
-                  <div className="col-2">Name</div>
-                  <div className="col-2">Climate</div>
-                  <div className="col-2">Population</div>
-                  <div className="col-2">Orbital Period</div>
-                  <div className="col-2 ">Rotation period</div>
-                  <div className="col-2">Diameter</div>
+                  <div className="col-2 text-center">Name</div>
+                  <div className="col-2 text-center">Climate</div>
+                  <div className="col-2 text-center">Population</div>
+                  <div className="col-2 text-center">Orbital Period</div>
+                  <div className="col-2 text-center">Rotation period</div>
+                  <div className="col-2 text-center">Diameter</div>
                 </div>
                 <div className="row text-danger">
-                  <div className="col-2">{store.planetDetails.name}</div>
-                  <div className="col-2">{store.planetDetails.climate}</div>
-                  <div className="col-2">{store.planetDetails.population}</div>
-                  <div className="col-2">{store.planetDetails.orbital_period}</div>
-                  <div className="col-2">{store.planetDetails.rotation_period}</div>
-                  <div className="col-2">{store.planetDetails.diameter}</div>
+                  <div className="col-2 text-center">{store.planetDetails.name}</div>
+                  <div className="col-2 text-center">{store.planetDetails.climate}</div>
+                  <div className="col-2 text-center">{store.planetDetails.population}</div>
+                  <div className="col-2 text-center">{store.planetDetails.orbital_period}</div>
+                  <div className="col-2 text-center">{store.planetDetails.rotation_period}</div>
+                  <div className="col-2 text-center">{store.planetDetails.diameter}</div>
                 </div>
               </div>
             </div>

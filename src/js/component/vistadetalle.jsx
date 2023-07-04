@@ -29,24 +29,24 @@ const Vistadetalle = () => {
               </div>
               <div className="container my-4">
                 <div className="row h4 pb-2 mb-4 mt-1 text-danger border-bottom border-danger">
-                  <div className="col-2">Name</div>
-                  <div className="col-2">Birth Year</div>
-                  <div className="col-2">Gender</div>
-                  <div className="col-2">Height</div>
-                  <div className="col-2 ">Skin Color</div>
-                  <div className="col-2">Eye Color</div>
+                  <div className="col-2 text-center">Name</div>
+                  <div className="col-2 text-center">Birth Year</div>
+                  <div className="col-2 text-center">Gender</div>
+                  <div className="col-2 text-center">Height</div>
+                  <div className="col-2 text-center">Skin Color</div>
+                  <div className="col-2 text-center">Eye Color</div>
                 </div>
                 <div className="row text-danger">
-                  <div className="col-2">{store.characterDetails.name}</div>
-                  <div className="col-2">
+                  <div className="col-2 text-center">{store.characterDetails.name}</div>
+                  <div className="col-2 text-center">
                     {store.characterDetails.birth_year}
                   </div>
-                  <div className="col-2">{store.characterDetails.gender}</div>
-                  <div className="col-2">{store.characterDetails.height}</div>
-                  <div className="col-2">
+                  <div className="col-2 text-center">{store.characterDetails.gender}</div>
+                  <div className="col-2 text-center">{store.characterDetails.height}</div>
+                  <div className="col-2 text-center">
                     {store.characterDetails.skin_color}
                   </div>
-                  <div className="col-2">
+                  <div className="col-2 text-center">
                     {store.characterDetails.eye_color}
                   </div>
                 </div>
