@@ -19,7 +19,7 @@ const Character = () => {
                   index + 1
                 }.jpg`}
                 className="card-img-top"
-                style={{ height: "325px", objectFit: "cover" }}
+                style={{ height: "400px", objectFit: "cover" }}
               />
               <div className="card-body">
                 <h5

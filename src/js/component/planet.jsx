@@ -8,7 +8,7 @@ const Planet = () => {
   return (
     <>
       <div className="row">
-        {store.planet.map((planets, index, population) => (
+        {store.planet.map((planets, index) => (
           <div className="col-md-3 mt-5" key={index}>
             <div
               className="card mx-3 bg-transparent border-dark"
