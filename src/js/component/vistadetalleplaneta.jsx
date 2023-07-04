@@ -25,7 +25,13 @@ const Vistadetalleplaneta = () => {
               </div>
               <div className="col-6">
                 <h1>{store.planetDetails.name}</h1>
-                <p1>{store.planetDetails.description}</p1>
+                <p1>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Veniam itaque corporis doloribus? Necessitatibus harum,
+                  adipisci illum rem dicta unde, asperiores recusandae itaque,
+                  quas soluta iure corrupti culpa facilis reprehenderit
+                  incidunt?
+                </p1>
               </div>
               <div className="container my-4">
                 <div className="row h4 pb-2 mb-4 mt-1 text-danger border-bottom border-danger">

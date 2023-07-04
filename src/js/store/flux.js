@@ -5,6 +5,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       characterDetails: {},
       planet: [],
       planetDetails: {},
+      favorites:[],
     },
     actions: {
       fetchCharacter: () => {
@@ -39,6 +40,22 @@ const getState = ({ getStore, getActions, setStore }) => {
             setStore({ planetDetails: response.result.properties });
           });
       },
+
+      setFavorites:(fav)=>{
+        const store = getStore()
+          if (!store.favorites.includes(fav)){
+            setStore({favorites:[...store.favorites, fav]})
+          }
+      },
+
+      deleteFavorite:(fav)=>{
+        const store = getStore()
+        const newFavorite = [...store.favorites]
+        const deletefav = newFavorite [fav]
+        newFavorite.splice(fav, 1)
+        setStore({favorites:newFavorite})
+      }
+      
     },
   };
 };

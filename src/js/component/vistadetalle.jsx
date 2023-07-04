@@ -25,7 +25,12 @@ const Vistadetalle = () => {
               </div>
               <div className="col-6">
                 <h1>{store.characterDetails.name}</h1>
-                <p1>{store.characterDetails.description}</p1>
+                <p1>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Blanditiis veritatis pariatur quasi dicta magni esse eius,
+                  cumque ad dignissimos atque inventore adipisci, dolores
+                  laborum ipsam! Animi quo ad deleniti ab.
+                </p1>
               </div>
               <div className="container my-4">
                 <div className="row h4 pb-2 mb-4 mt-1 text-danger border-bottom border-danger">

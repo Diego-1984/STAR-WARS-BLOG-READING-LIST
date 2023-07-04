@@ -33,7 +33,7 @@ const Character = (props) => {
                   }}
                 >
                   {people.name}
-                  {people.gender}
+                  {store.characterDetails.gender}
                 </h5>
                 <Link
                   to={`/people/${people.uid}`}
@@ -41,7 +41,7 @@ const Character = (props) => {
                 >
                   Learn more!
                 </Link>
-                <button className="color-danger border-danger bg-transparent ms-5">
+                <button onClick= {()=> actions.setFavorites(people.name)} className="color-danger border-danger bg-transparent ms-5">
                   <i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i>
                 </button>
               </div>

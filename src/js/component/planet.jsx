@@ -32,7 +32,7 @@ const Planet = (props) => {
                     textOverflow: "ellipsis",
                   }}
                 >
-                  {planets.name}
+                  {planets.name} {store.planetDetails.population}
                 </h5>
                 <Link
                   to={`/planets/${planets.uid}`}
