@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { useParams } from "react-router";
 import { Context } from "../store/appContext";
 
-const Vistadetalle = () => {
+const Vistadetallepersonaje = () => {
   const params = useParams();
   const { actions, store } = useContext(Context);
   useEffect(() => {
@@ -71,4 +71,4 @@ const Vistadetalle = () => {
     </div>
   );
 };
-export default Vistadetalle;
+export default Vistadetallepersonaje;

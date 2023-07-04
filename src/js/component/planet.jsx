@@ -1,11 +1,9 @@
-// import React from "react";
-import { Link, useParams } from "react-router-dom";
-import React, { useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 
-const Planet = (props) => {
-  const params = useParams();
-  const { store, actions } = useContext(Context);
+const Planet = () => {
+    const { store, actions } = useContext(Context);
 
   return (
     <>
@@ -40,7 +38,10 @@ const Planet = (props) => {
                 >
                   Learn more!
                 </Link>
-                <button className="color-danger border-danger bg-transparent ms-5">
+                <button
+                  onClick={() => actions.setFavorites(planets.name)}
+                  className="color-danger border-danger bg-transparent ms-5"
+                >
                   <i class="fa-regular fa-heart border-danger text-color-danger text-danger"></i>
                 </button>
               </div>

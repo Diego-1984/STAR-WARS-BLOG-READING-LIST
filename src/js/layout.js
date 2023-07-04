@@ -4,8 +4,8 @@ import ScrollToTop from "./component/scrollToTop";
 import { Navbar } from "./component/navbar";
 import Home from "./views/home";
 import injectContext from "./store/appContext";
-import Vistadetalle from "./component/vistadetalle.jsx";
 import Vistadetalleplaneta from "./component/vistadetalleplaneta.jsx";
+import Vistadetallepersonaje from "./component/vistadetallepersonaje.jsx";
 
 const Layout = () => {
   const basename = process.env.BASENAME || "";
@@ -17,7 +17,7 @@ const Layout = () => {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/people/:id" element={<Vistadetalle />} />
+            <Route path="/people/:id" element={<Vistadetallepersonaje />} />
             <Route path="/planets/:id" element={<Vistadetalleplaneta />} />
             <Route path="*" element={<h1>Not found!</h1>} />
           </Routes>
