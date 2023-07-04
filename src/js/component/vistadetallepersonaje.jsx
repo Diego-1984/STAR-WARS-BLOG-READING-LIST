@@ -12,7 +12,8 @@ const Vistadetallepersonaje = () => {
     <div>
       {store.characterDetails ? (
         <div>
-          <div className="container">
+          <div className="text-black">h</div>
+          <div className="container"style={{ marginTop: "60px" }}>
             <div className="row">
               <div className="col-6">
                 <img

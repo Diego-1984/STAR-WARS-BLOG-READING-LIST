@@ -6,7 +6,8 @@ import Planet from "../component/planet.jsx";
 const Home = () => {
   return (
     <>
-      <div className="container-fluid bg-black">
+      <div style={{ marginTop: "75px" }} className="container-fluid bg-black">
+        <div className="text-black">h</div>
         <h1>Characters</h1>
         <div className="card-group mt-3">
           <Character />
@@ -22,4 +23,5 @@ const Home = () => {
     </>
   );
 };
+
 export default Home;
