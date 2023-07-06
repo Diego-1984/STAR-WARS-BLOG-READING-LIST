@@ -7,9 +7,8 @@ const Home = () => {
   return (
     <>
       <div style={{ marginTop: "75px" }} className="container-fluid bg-black">
-        <div className="text-black">h</div>
         <h1>Characters</h1>
-        <div className="card-group mt-3">
+        <div className="card-group my-0">
           <Character />
         </div>
       </div>

@@ -7,17 +7,19 @@ const Character = () => {
   const { store, actions } = useContext(Context);
 
   return (
-    <div className="d-flex flex-wrap mb-3">
+    <div className="card-container">
       {store.character.map((people, index) => (
         <div className="col col-md-3 mt-5 wrapScroll" key={index}>
           <div
-            className="card mx-3 bg-transparent border-dark"
+            className="card mx-3 bg-transparent border-dark my-3"
             style={{ minWidth: "250px", maxWidth: "600px" }}
           >
             <img
-              src={`https://starwars-visualguide.com/assets/img/characters/${index + 1}.jpg`}
+              src={`https://starwars-visualguide.com/assets/img/characters/${
+                index + 1
+              }.jpg`}
               className="card-img-top"
-              style={{ height: "400px", objectFit: "cover" }}
+              style={{ height: "325px", objectFit: "cover" }}
               alt={`Character ${people.name}`}
             />
             <div className="card-body">
@@ -26,7 +28,7 @@ const Character = () => {
                 style={{
                   overflow: "hidden",
                   whiteSpace: "nowrap",
-                  textOverflow: "ellipsis"
+                  textOverflow: "ellipsis",
                 }}
               >
                 {people.name}
@@ -58,4 +60,3 @@ const Character = () => {
 };
 
 export default Character;
-

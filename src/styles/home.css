@@ -1,6 +1,6 @@
-.wrapScroll {
-    white-space: nowrap;
-    overflow-x: auto;
-    padding: 2%;
-    
-  }
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

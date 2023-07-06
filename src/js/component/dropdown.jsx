@@ -14,18 +14,22 @@ const Dropdown = () => {
         >
           Favorites {store.favorites.length}
         </button>
-        <ul className="dropdown-menu bg-dark dropdown-menu-end">
-          {store.favorites.map((fav, index) => (
-            <li key={index} className="d-flex mx-1 bg-dark">
-              <a className="dropdown-item text-white my-1 bg-dark">{fav}</a>
-              <button
-                className="bg-dark"
-                onClick={() => actions.deleteFavorite(index)}
-              >
-                <i className="fa-solid fa-trash-can mx-1 text-danger bg-dark "></i>
-              </button>
-            </li>
-          ))}
+        <ul className="dropdown-menu bg-dark dropdown-menu-end text-white ">
+          {store.favorites.length === 0 ? (
+            <li className="d-flex justify-content-center">(No items added)</li>
+          ) : (
+            store.favorites.map((fav, index) => (
+              <li key={index} className="d-flex mx-1 bg-dark">
+                <a className="dropdown-item text-white my-1 bg-dark">{fav}</a>
+                <button
+                  className="bg-dark"
+                  onClick={() => actions.deleteFavorite(index)}
+                >
+                  <i className="fa-solid fa-trash-can mx-1 text-danger bg-dark "></i>
+                </button>
+              </li>
+            ))
+          )}
         </ul>
       </div>
     </>

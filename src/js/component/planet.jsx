@@ -7,11 +7,11 @@ const Planet = () => {
 
   return (
     <>
-      <div className="row">
+      <div className="card-container">
         {store.planet.map((planets, index) => (
           <div className="col-md-3 mt-5" key={index}>
             <div
-              className="card mx-3 bg-transparent border-dark"
+              className="card mx-3 bg-transparent border-dark my-3"
               style={{ minWidth: "250px", maxWidth: "600px" }}
             >
               <img
