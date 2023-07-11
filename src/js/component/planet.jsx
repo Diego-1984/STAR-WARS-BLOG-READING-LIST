@@ -33,8 +33,8 @@ const Planet = () => {
                 >
                   {planets.name}
                 </h5>
-                <h6>Population: {store.planetDetails.population}</h6>
-                <h6>Terrain: {store.planetDetails.terrain}</h6>
+                <h6>Population: {planets.population}</h6>
+                <h6>Terrain: {planets.terrain}</h6>
                 <div className="mt-3 justify-content-between d-flex">
                   <Link
                     to={`/planets/${planets.uid}`}

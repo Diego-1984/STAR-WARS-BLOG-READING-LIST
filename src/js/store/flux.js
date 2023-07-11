@@ -5,16 +5,23 @@ const getState = ({ getStore, setStore }) => {
       characterDetails: {},
       planet: [],
       planetDetails: {},
-      favorites:[],
+      favorites: [],
     },
     actions: {
-      fetchCharacter: () => {
-        fetch("https://www.swapi.tech/api/people")
-          .then((response) => response.json())
-          .then((response) => {
-            console.log(response);
-            setStore({ character: response.results });
-          });
+      fetchCharacter: async () => {
+        const response = await fetch("https://www.swapi.tech/api/people");
+        const data = await response.json();
+        const character = await Promise.all(
+          data.results.map(async (people) => {
+            const peopleResponse = await fetch(people.url);
+            return {
+              ...(await peopleResponse.json()).result.properties,
+              uid: people.uid,
+            };
+          })
+        );
+
+        setStore({ ...getStore(), character });
       },
       fetchCharacterDetails: (id) => {
         fetch(`https://www.swapi.tech/api/people/${id}`)
@@ -24,14 +31,21 @@ const getState = ({ getStore, setStore }) => {
             setStore({ characterDetails: response.result.properties });
           });
       },
-      fetchPlanet: () => {
-        fetch("https://www.swapi.tech/api/planets")
-          .then((response) => response.json())
-          .then((response) => {
-            console.log(response);
-            setStore({ planet: response.results });
-          });
+      fetchPlanet: async() => {
+       const response =  await fetch("https://www.swapi.tech/api/planets")
+       const data = await response.json();
+       const planet = await Promise.all(
+         data.results.map(async (planet) => {
+           const planetResponse = await fetch(planet.url);
+           return {
+             ...(await planetResponse.json()).result.properties,
+             uid: planet.uid,
+           };
+         })
+       );
+       setStore({...getStore(), planet})
       },
+
       fetchPlanetDetails: (id) => {
         fetch(`https://www.swapi.tech/api/planets/${id}`)
           .then((response) => response.json())
@@ -41,21 +55,20 @@ const getState = ({ getStore, setStore }) => {
           });
       },
 
-      setFavorites:(fav)=>{
-        const store = getStore()
-          if (!store.favorites.includes(fav)){
-            setStore({favorites:[...store.favorites, fav]})
-          }
+      setFavorites: (fav) => {
+        const store = getStore();
+        if (!store.favorites.includes(fav)) {
+          setStore({ favorites: [...store.favorites, fav] });
+        }
       },
 
-      deleteFavorite:(fav)=>{
-        const store = getStore()
-        const newFavorite = [...store.favorites]
-        const deletefav = newFavorite [fav]
-        newFavorite.splice(fav, 1)
-        setStore({favorites:newFavorite})
-      }
-      
+      deleteFavorite: (fav) => {
+        const store = getStore();
+        const newFavorite = [...store.favorites];
+        const deletefav = newFavorite[fav];
+        newFavorite.splice(fav, 1);
+        setStore({ favorites: newFavorite });
+      },
     },
   };
 };
