@@ -38,7 +38,7 @@ const Character = () => {
 
                 <h6>Gender: {people.gender}</h6>
                 <h6>Hair color: {people.hair_color}</h6>
-                <h6>Eye color:{people.eye_color}</h6>
+                <h6>Eye color: {people.eye_color}</h6>
 
                 <div className="mt-3 justify-content-between d-flex">
                   <Link
